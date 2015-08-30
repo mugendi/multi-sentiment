@@ -96,6 +96,9 @@ function parse(string,callback){
 
 }
 
+module.exports=parse;
+
+/*
 var strings=[
                 "wtf are you doing over there Jill said, I hate Bill.",
                 'Mary hoped her presentation would go well.',
@@ -115,6 +118,8 @@ strings.forEach(function(string){
     });
  
 })
+
+*/
 
 
 
