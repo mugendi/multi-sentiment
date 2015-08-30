@@ -1,6 +1,6 @@
 {
   "name": "multi-sentiment",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Merge multiple sentiment libraries for better sentiment analysis",
   "main": "index.js",
   "scripts": {
