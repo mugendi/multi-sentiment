@@ -1,34 +1,35 @@
 {
-  "name": "sentiment",
+  "name": "multi-sentiment",
   "version": "1.0.0",
-  "description": "",
+  "description": "Merge multiple sentiment libraries for better sentiment analysis",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Anthony Mugendi (ngurumugz@gmail.com)",
+  "license": "MIT",
   "dependencies": {
     "async": "^1.4.2",
-    "emoji-text": "^0.2.5",
-    "emojify": "^1.0.0",
     "emotional": "0.0.3",
     "lodash": "^3.10.1",
-    "nlcst-to-string": "^1.0.0",
-    "polarity": "^0.2.0",
-    "retext": "^0.6.0",
-    "retext-emoji": "^0.5.4",
-    "retext-inspect": "^0.4.2",
-    "retext-keywords": "^1.0.1",
-    "retext-sentiment": "^1.0.0",
-    "retext-smartypants": "^1.0.0",
-    "retext-visit": "^0.2.6",
-    "retext-walk": "^0.1.5",
     "sentiment": "^1.0.2",
-    "sentimentjs": "^1.0.6",
-    "sentiword": "0.0.1",
-    "smslingo": "0.0.2",
-    "speakeasy-nlp": "^0.2.2",
-    "unist-util-inspect": "^1.0.0"
-  }
+    "sentiword": "0.0.1"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mugendi/multi-sentiment.git"
+  },
+  "keywords": [
+    "sentiment",
+    "emotion",
+    "subjectivity",
+    "analysis",
+    "ai",
+    "corpus"
+  ],
+  "bugs": {
+    "url": "https://github.com/mugendi/multi-sentiment/issues"
+  },
+  "homepage": "https://github.com/mugendi/multi-sentiment"
 }
