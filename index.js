@@ -28,7 +28,7 @@ var sent={
         var obj = sentiword(string);
 
         parsed={
-            valence:(obj.avgSentiment)? obj.avgSentiment+parsed.sentiment : parsed.valence,
+            valence:(obj.avgSentiment)? obj.avgSentiment + parsed.valence : parsed.valence,
             subjectivity:parsed.subjectivity,
             objectivity:obj.objective+parsed.objectivity
         }
@@ -72,7 +72,7 @@ function parse(string,callback){
     ],function (err,text, parsed) {
         // result now equals 'done'
         //use sentiment if greater than 1
-        parsed.valence=(Math.abs(parsed.valence)> 0.5) ? _.round(parsed.valence,3) : 0;
+        parsed.valence= (Math.abs(parsed.valence)> 0.5) ? _.round(parsed.valence,3) : 0;
         parsed.subjectivity=_.round(parsed.subjectivity,3);
         parsed.objectivity=_.round(parsed.objectivity,3);
 
@@ -99,25 +99,6 @@ function parse(string,callback){
 module.exports=parse;
 
 /*
-var strings=[
-                "wtf are you doing over there Jill said, I hate Bill.",
-                'Mary hoped her presentation would go well.',
-                'Sentiment expressions are a type of subjective expression.  Specifically, they are expressions of positive and negative emotions, judgments, evaluations, and stances. In the examples above, "hate" is a negative sentiment expression and "hope" is a positive sentiment expression.',
-                'I failed my exams and now I dont know what to do'
-            ]
-
-strings.forEach(function(string){
-
-   parse(string,function(parsed){
-        if(typeof string !=='string' || string.trim().length ==0 ){
-            return ;
-        }
-
-        console.log(string)
-        console.log(JSON.stringify(parsed,0,4))
-    });
- 
-})
 
 */
 
