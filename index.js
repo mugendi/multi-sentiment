@@ -72,18 +72,22 @@ function parse(string,callback){
     ],function (err,text, parsed) {
         // result now equals 'done'
         //use sentiment if greater than 1
-        parsed.valence= (Math.abs(parsed.valence)> 0.5) ? _.round(parsed.valence,3) : 0;
+        parsed.valence= (Math.abs(parsed.valence)> 0) ? _.round(parsed.valence,3) : 0;
         parsed.subjectivity=_.round(parsed.subjectivity,3);
         parsed.objectivity=_.round(parsed.objectivity,3);
 
         var obj={
             sentiment:{
                 valence:parsed.valence
-            },
-            objectivity:{
-                subjectivity:parsed.subjectivity,
-                objectivity:parsed.objectivity
-            }
+            }            
+        }
+
+
+        if(parsed.subjectivity > parsed.objectivity){
+            obj.subjectivity=parsed.subjectivity
+        }
+        else{
+            obj.objectivity=parsed.objectivity
         }
 
         if(parsed.valence===0){ obj.sentiment.polarity='neu'; }
@@ -97,19 +101,3 @@ function parse(string,callback){
 }
 
 module.exports=parse;
-
-/*
-
-*/
-
-
-
-
-
-
-
-
-
-
-
-
